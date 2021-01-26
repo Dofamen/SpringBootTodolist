@@ -37,6 +37,7 @@ public class ListeController {
         if (user.isPresent()) {
             liste.setUtilisateur(user.get());
             listeRepository.save(liste);
+            return liste;
         }
         throw new Exception();
     }
